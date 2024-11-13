@@ -1,0 +1,27 @@
+# フラッシュメッセージの設定
+
+　- 要件（ゴール）を確認&紙に書き出す。
+
+　　以下の挙動時に指定のキーを使ってテキスト（背景色指定込み）を表示する。
+　　- 新規ユーザー登録
+　　　- 成功：ユーザー登録が完了しました（キー：success 　背景色：緑）
+　　　- 失敗：ユーザー登録に失敗しました（キー：danger 　背景色：赤）
+　　- ログイン
+　　　- 成功：ログインしました（キー：success 　背景色：緑）
+　　　- 失敗：ログインに失敗しました（キー：danger 　背景色：赤）
+　　- ログアウト
+　　　- 成功：ログアウトしました（キー：success 　背景色：緑）
+
+## app/controllers/application_controller.rb
+'''
+class ApplicationController < ActionController::Base
+  ... 省略 ...
+
+　/railsで用意されたドキュメント デフォルトでalertとnoticeの２種類のキーしか用意されていないため、
+  /application_controller.rbに設定を追加するとデフォルトのalertとnotice以外で、Bootstrapに用意されているスタイルのフラッシュを定義出来る。
+  add_flash_types :success, :danger
+
+  private
+  ... 省略 ...
+end
+'''
