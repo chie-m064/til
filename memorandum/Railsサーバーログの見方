@@ -1,0 +1,7 @@
+# Railsサーバーログ
+
+```
+$ docker ps
+
+$ docker attach xxxxx（xxxxxにはxxx_basic_rails_basic-webの左側にあるCONTAINER ID を入力）
+```
