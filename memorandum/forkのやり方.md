@@ -22,3 +22,10 @@ forkが成功したので、git cloneコマンドでローカルの環境にコ�
 ```
 git clone コピーしたリポジトリURL
 ```
+
+3. Dockerを使った環境準備（イメージのビルド）
+```
+docker compose build
+```
+
+4. 
